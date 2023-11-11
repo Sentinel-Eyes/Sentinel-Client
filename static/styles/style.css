@@ -1,0 +1,21 @@
+.navbar-title {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+.navbar-title a {
+    text-decoration: none; /* Remove hyperlink decoration */
+}
+
+.navbar-title h1 {
+    color: white; /* Change to your desired text color */
+    font-family: "YourFont", sans-serif; /* Use your desired font family */
+}
+
+.vid
+{
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+}
