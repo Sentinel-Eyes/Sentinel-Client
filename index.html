@@ -43,7 +43,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
-                <a class="nav-item nav-link" href="https://a1c6-131-226-112-62.ngrok-free.app/admin">Admin</a>
+                <a class="nav-item nav-link" href="https://gorgeous-bengal-innocent.ngrok-free.app/admin">Admin</a>
             </div>
         </div>
     </div>
@@ -188,9 +188,10 @@
             function sendFrameData(base64Data) {
                 // Set the flag to indicate that an AJAX request is pending
                 isRequestPending = true;
+                
 
                 $.ajax({
-                    url: "https://a1c6-131-226-112-62.ngrok-free.app/face_recognition/",
+                    url: "https://gorgeous-bengal-innocent.ngrok-free.app/face_recognition/",
                     method: "POST",
                     data: {"frame": base64Data},
                     success: function (data) {
