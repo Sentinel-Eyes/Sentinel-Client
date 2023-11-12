@@ -43,7 +43,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
-                <a class="nav-item nav-link" href="https://localhost:8000/admin">Admin</a>
+                <a class="nav-item nav-link" href="http://localhost:8000/admin">Admin</a>
             </div>
         </div>
     </div>
@@ -190,7 +190,7 @@
                 isRequestPending = true;
 
                 $.ajax({
-                    url: "https://localhost:8000/face_recognition/",
+                    url: "http://localhost:8000/face_recognition/",
                     method: "POST",
                     data: {"frame": base64Data},
                     success: function (data) {
