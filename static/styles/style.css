@@ -1,21 +1,13 @@
-.navbar-title {
-    text-align: center;
-    width: 100%;
-    margin: 0;
+.vid {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+  -moz-transform: rotateY(180deg); /* Firefox */
 }
 
-.navbar-title a {
-    text-decoration: none; /* Remove hyperlink decoration */
+.navbar-color {
+  background-color:     rgba(14, 77, 77, 0.753);
 }
 
-.navbar-title h1 {
-    color: white; /* Change to your desired text color */
-    font-family: "YourFont", sans-serif; /* Use your desired font family */
-}
-
-.vid
-{
-    transform: rotateY(180deg);
-    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
-    -moz-transform:rotateY(180deg); /* Firefox */
+.navbar-color a {
+  color: #231f20;
 }
