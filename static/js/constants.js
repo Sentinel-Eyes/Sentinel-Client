@@ -1,29 +1,33 @@
 const vonnUrl = "https://climbing-smashing-grouse.ngrok-free.app";
 const shynUrl = "https://gorgeous-bengal-innocent.ngrok-free.app";
 let urlAPI = ""
-function checkServerAndUpdateLink(url, callback, host) {
+const servers = [
+    { url: vonnUrl, host: "Vonn is Hosting" },
+    { url: shynUrl, host: "Shyn is Hosting" }
+];
+
+function checkServerAndUpdateLink(server, callback) {
     $.ajax({
-        url: `${url}/server_status/`,
+        url: `${server.url}/server_status/`,
         method: "GET",
         success: function () {
-            console.log(`${url} is up and running. ${host}`);
-            callback(url); // Call the callback with the URL
+            console.log(`${server.url} is up and running. ${server.host}`);
+            callback(server); // Call the callback with the server info
         },
         error: function () {
-            console.error(`${url} is not reachable. Server may be down. ${host}}`);
+            console.error(`${server.url} is not reachable. Server may be down. ${server.host}`);
             // Display an error message or take other actions as needed
         }
     });
 }
 
-// Function to update the link with the given URL
-function updateLink(url) {
-    $('#admin-link').attr('href', url + '/admin');
-    urlAPI = url;
+function updateLink(server) {
+    $('#admin-link').attr('href', server.url + '/admin');
+    urlAPI = server.url;
+    $('#host-status').text(server.host);
 }
 
-// Check vonnUrl
-checkServerAndUpdateLink(vonnUrl, updateLink, "Vonn Hosting");
-
-// Check shynUrl
-checkServerAndUpdateLink(shynUrl, updateLink, "Shyn Hosting");
+// Loop through the servers array and check each server
+servers.forEach(server => {
+    checkServerAndUpdateLink(server, updateLink);
+});
