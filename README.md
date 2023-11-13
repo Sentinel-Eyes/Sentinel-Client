@@ -9,7 +9,7 @@ npm install
 ```
 
 
-How to Run Locally 
+Run Locally 
 
 ```
 npm run dev
