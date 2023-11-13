@@ -55,7 +55,7 @@
               <div class="card">
                 <div class="card-header">Live Video Feed</div>
                 <div class="card-body">
-                  <canvas id="canvas_output" class="img-fluid"></canvas>
+                  <canvas id="canvas_output" class="img-fluid canvas-mirror"></canvas>
                 </div>
               </div>
             </div>
@@ -78,7 +78,7 @@
               <div class="card">
                 <div class="card-header">Captured Frame</div>
                 <div class="card-body">
-                  <canvas id="face_canvas"></canvas>
+                  <canvas id="face_canvas" class="img-fluid canvas-mirror"></canvas>
                 </div>
               </div>
             </div>
@@ -204,7 +204,7 @@
 
           // Resize the face region to fit the display canvas
           let resizedFace = new cv.Mat();
-          cv.flip(faceRegion, resizedAndMirroredFace, 1); // 1 indicates horizontal flip
+           // 1 indicates horizontal flip
           cv.resize(
             faceRegion,
             resizedFace,
@@ -249,7 +249,7 @@
     }
 
     // schedule first one.
-    setTimeout(processVideo, 8000);
+    setTimeout(processVideo, 4000);
   };
 }
 
