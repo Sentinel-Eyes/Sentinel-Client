@@ -204,6 +204,7 @@
 
           // Resize the face region to fit the display canvas
           let resizedFace = new cv.Mat();
+          cv.flip(faceRegion, resizedAndMirroredFace, 1); // 1 indicates horizontal flip
           cv.resize(
             faceRegion,
             resizedFace,
