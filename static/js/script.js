@@ -17,7 +17,7 @@ function openCvReady() {
     let faces = new cv.RectVector();
     let classifier = new cv.CascadeClassifier();
     let utils = new Utils("errorMessage");
-    let faceCascadeFile = "/haarcascade_frontalface_default.xml"; // path to xml
+    let faceCascadeFile = "haarcascade_frontalface_default.xml"; // path to xml
     utils.createFileFromUrl(faceCascadeFile, faceCascadeFile, () => {
       classifier.load(faceCascadeFile); // in the callback, load the cascade from file
     });
